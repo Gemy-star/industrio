@@ -158,7 +158,7 @@ h6,
 }
 
 @media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link  {
+    .navbar .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -196,7 +196,7 @@ h6,
     bottom: 0;
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%);
+    background: linear-gradient(to right, rgba(238, 241, 244) 0%, rgba(2, 36, 91, 0) 100%);
     z-index: 1;
 }
 
@@ -219,7 +219,7 @@ h6,
         position: relative;
         min-height: 450px;
     }
-    
+
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;
@@ -229,7 +229,7 @@ h6,
 }
 
 .page-header {
-    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/carousel-2.jpg) center center no-repeat;
+    background: linear-gradient(to right, rgba(238, 241, 244) 0%, rgba(2, 36, 91, 0) 100%), url(../img/carousel-2.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -248,7 +248,7 @@ h6,
 .facts {
     position: relative;
     margin: 6rem 0;
-    background: var(--dark);
+    background: var(--primary);
 }
 
 .facts .border {
@@ -500,12 +500,12 @@ h6,
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: var(--dark);
+    background: var(--light);
     transition: .5s;
 }
 
 .project-item:hover .project-title,
-.project-carousel .owl-item.center .project-title  {
+.project-carousel .owl-item.center .project-title {
     bottom: -60px;
 }
 
@@ -517,7 +517,7 @@ h6,
     top: -15px;
     left: 0;
     transform: skewY(-5deg);
-    background: var(--dark);
+    background: var(--primary);
     transition: .5s;
 }
 
@@ -597,6 +597,7 @@ h6,
 }
 
 @media (min-width: 768px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 200px;
@@ -604,6 +605,7 @@ h6,
 }
 
 @media (min-width: 992px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 300px;
