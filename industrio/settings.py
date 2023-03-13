@@ -39,9 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'solo',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
-
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -53,7 +56,6 @@ MIDDLEWARE = [
 ]
 
 
-    
 ROOT_URLCONF = 'industrio.urls'
 
 TEMPLATES = [
@@ -67,7 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                "website.context_processors.web_info", 
+                "website.context_processors.web_info",
 
             ],
         },

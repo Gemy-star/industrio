@@ -2,7 +2,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
         <a href="{% url 'home-page' %}" class="navbar-brand ps-5 me-0">
-            <h1 class="text-white m-0">{{ web_data.site_name }}</h1>
+            <h1 class="text-white m-0">{{ web_data.site_name|title  }}</h1>
         </a>
         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -12,9 +12,9 @@
                 <a href="{% url 'home-page' %}" class="nav-item nav-link active">Home</a>
                 <a href="{% url 'about-page' %}" class="nav-item nav-link">About</a>
                 <a href="{% url 'services-page' %}" class="nav-item nav-link">Services</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="{% url 'contact-page' %}" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a>
+            {% comment %} <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a> {% endcomment %}
         </div>
     </nav>
     <!-- Navbar End -->
