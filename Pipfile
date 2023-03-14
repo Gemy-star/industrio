@@ -10,6 +10,9 @@ django-silk = "*"
 django-solo = "*"
 django-crispy-forms = "*"
 crispy-bootstrap5 = "*"
+bs4 = "*"
+django-money = "*"
+django-imagekit = "*"
 
 [dev-packages]
 autopep8 = "*"

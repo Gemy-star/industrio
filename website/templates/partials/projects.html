@@ -8,42 +8,55 @@
             <h1 class="display-5 text-primary mb-5">See What We Have Completed Recently</h1>
         </div>
         <div class="owl-carousel project-carousel wow fadeIn" data-wow-delay="0.1s">
-            <a class="project-item" href="">
-                <img class="img-fluid" src="{% static 'img/project-1.jpg' %}" alt="">
-                <div class="project-title">
-                    <h5 class="text-primary mb-0">Auto Engineering</h5>
-                </div>
-            </a>
-            <a class="project-item" href="">
-                <img class="img-fluid" src="{% static 'img/project-2.jpg' %}" alt="">
-                <div class="project-title">
-                    <h5 class="text-primary mb-0">Civil Engineering</h5>
-                </div>
-            </a>
-            <a class="project-item" href="">
-                <img class="img-fluid" src="{% static 'img/project-3.jpg' %}" alt="">
-                <div class="project-title">
-                    <h5 class="text-primary mb-0">Gas Engineering</h5>
-                </div>
-            </a>
-            <a class="project-item" href="">
-                <img class="img-fluid" src="{% static 'img/project-4.jpg' %}" alt="">
-                <div class="project-title">
-                    <h5 class="text-primary mb-0">Power Engineering</h5>
-                </div>
-            </a>
-            <a class="project-item" href="">
-                <img class="img-fluid" src="{% static 'img/project-5.jpg' %}" alt="">
-                <div class="project-title">
-                    <h5 class="text-primary mb-0">Energy Engineering</h5>
-                </div>
-            </a>
-            <a class="project-item" href="">
-                <img class="img-fluid" src="{% static 'img/project-6.jpg' %}" alt="">
-                <div class="project-title">
-                    <h5 class="text-primary mb-0">Water Engineering</h5>
-                </div>
-            </a>
+           {% if projects_obj.count > 0 %}
+           {% for project in projects_obj  %}
+           <a class="project-item" href="{{project.get_absolute_url}}">
+            <img class="img-fluid" src="{{project.image_thumb_png.url}}" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">{{project.get_title_beauty}}</h5>
+            </div>
+        </a>
+
+           {% endfor %}
+
+           {% else %}
+           <a class="project-item" href="">
+            <img class="img-fluid" src="{% static 'img/project-1.jpg' %}" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">Auto Engineering</h5>
+            </div>
+        </a>
+        <a class="project-item" href="">
+            <img class="img-fluid" src="{% static 'img/project-2.jpg' %}" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">Civil Engineering</h5>
+            </div>
+        </a>
+        <a class="project-item" href="">
+            <img class="img-fluid" src="{% static 'img/project-3.jpg' %}" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">Gas Engineering</h5>
+            </div>
+        </a>
+        <a class="project-item" href="">
+            <img class="img-fluid" src="{% static 'img/project-4.jpg' %}" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">Power Engineering</h5>
+            </div>
+        </a>
+        <a class="project-item" href="">
+            <img class="img-fluid" src="{% static 'img/project-5.jpg' %}" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">Energy Engineering</h5>
+            </div>
+        </a>
+        <a class="project-item" href="">
+            <img class="img-fluid" src="{% static 'img/project-6.jpg' %}" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">Water Engineering</h5>
+            </div>
+        </a>
+           {% endif %}
         </div>
     </div>
     <!-- Project End -->

@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from .forms import ContactForm
 from django.views.generic import CreateView, DetailView, TemplateView
-from .models import Contact
+from .models import Contact, Project
 # Create your views here.
 
 
 class HomePageView(TemplateView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        projects = Project.objects.all().order_by('-pk')
+        context.update({"projects_obj": projects})
     template_name = 'website/home_page.html'
 
 

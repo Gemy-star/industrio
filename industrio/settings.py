@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'solo',
     'crispy_forms',
     'crispy_bootstrap5',
+    'djmoney',
+    'imagekit'
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
