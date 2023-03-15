@@ -472,7 +472,7 @@ h6,
 /*** Project ***/
 .project-carousel {
     position: relative;
-    background: var(--dark);
+    background: transparent;
 }
 
 .project-item {
